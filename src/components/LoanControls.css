@@ -1,0 +1,33 @@
+.loan-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.control-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-light);
+  font-family: 'DM Mono', monospace;
+}
+
+.control-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+}

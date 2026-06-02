@@ -1,0 +1,92 @@
+.amort-panel {
+  width: 100%;
+}
+
+.amort-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.amort-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: 'DM Mono', monospace;
+}
+
+.amort-scroll {
+  overflow-x: auto;
+}
+
+.amort-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.amort-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.amort-table td {
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.amort-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.amort-table tbody tr:hover td {
+  background: var(--bg-secondary);
+}
+
+.amort-year-end td {
+  background: rgba(26, 58, 92, 0.03);
+}
+
+.amort-td--month {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.amort-td--principal {
+  color: var(--navy-light);
+  font-weight: 500;
+}
+
+.amort-td--interest {
+  color: var(--blue-mid);
+}
+
+.amort-toggle {
+  display: block;
+  margin: 1rem auto 0;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.amort-toggle:hover {
+  background: var(--bg-secondary);
+  color: var(--navy-light);
+}
