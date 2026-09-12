@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 🏦 Bank Loan Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive, interactive loan calculator and visualizer built with **React** and **Chart.js**. Adjust loan parameters in real time and instantly see a breakdown of payments, interest, and amortization schedule.
 
-## Available Scripts
+---
+## 📬 Submission Links
 
-In the project directory, you can run:
+| | Link |
+|---|---|
+| 🌐 **Hosted Link** | [Click here](https://eloquent-lamington-4277eb.netlify.app/) |
+| 🐙 **GitHub Repository** | [Click here](https://github.com/Vihanga-Ops/-LocalTasker.git) |
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 Preview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Pie chart showing principal vs interest · Line chart of remaining balance · Full amortization table
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Features
 
-### `npm run build`
+- 🎚️ **Live sliders** — adjust loan amount, interest rate, and term instantly
+- 🥧 **Pie chart** — visual breakdown of principal vs total interest (Chart.js)
+- 📈 **Line chart** — remaining balance plotted over the loan term
+- 📋 **Amortization table** — full month-by-month payment schedule
+- 🔁 **Lifting state up** — all loan state managed in `App.js` and passed as props
+- ⚡ **React setState** — dynamic re-renders on every input change
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧮 Formulas Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Variable | Formula |
+|---|---|
+| Total Loan Months | `loanTerm × 12` |
+| Interest Per Month | `interestRate / 100 / 12` |
+| Monthly Payment | `(loanAmount × ipm × (1 + ipm)^n) / ((1 + ipm)^n − 1)` |
+| Total Interest Generated | `monthlyPayment × totalLoanMonths − loanAmount` |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Node.js v16+
+- npm v8+
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/bank-dashboard.git
 
-## Learn More
+# 2. Navigate into the project
+cd bank-dashboard
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 3. Install dependencies
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 4. Install Chart.js (if not already installed)
+npm install chart.js react-chartjs-2
 
-### Code Splitting
+# 5. Start the development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Analyzing the Bundle Size
+### Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run build
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📁 File Structure
 
-### Advanced Configuration
+```
+bank-dashboard/
+├── public/
+│   └── index.html                    # HTML entry point + Google Fonts
+├── src/
+│   ├── components/
+│   │   ├── Header.js                 # Page title
+│   │   ├── Header.css
+│   │   ├── LoanControls.js           # Range slider inputs
+│   │   ├── LoanControls.css
+│   │   ├── MetricCards.js            # Summary metrics grid
+│   │   ├── MetricCards.css
+│   │   ├── PieChartPanel.js          # Chart.js pie chart
+│   │   ├── PieChartPanel.css
+│   │   ├── BalanceLineChart.js       # Chart.js line chart
+│   │   ├── BalanceLineChart.css
+│   │   ├── AmortizationTable.js      # Expandable payment table
+│   │   └── AmortizationTable.css
+│   ├── App.js                        # Root component — state management
+│   ├── App.css                       # Layout styles
+│   ├── index.js                      # React entry point
+│   └── index.css                     # Global styles + CSS variables
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🛠️ Technology Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Technology | Purpose |
+|---|---|
+| React 18 | UI components, useState, useMemo |
+| Chart.js 4 | Pie and line chart rendering |
+| react-chartjs-2 | React wrapper for Chart.js |
+| DM Sans / DM Mono | Typography (Google Fonts) |
+| CSS Variables | Theming and design tokens |
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 💡 React Concepts Demonstrated
+
+- **Lifting State Up** — loan parameters live in `App.js` and flow down to all child components via props
+- **useState** — manages `loanAmount`, `interestRate`, and `loanTerm`
+- **useMemo** — memoizes expensive loan calculations so they only rerun when inputs change
+- **useRef + useEffect** — used in chart components to imperatively create and destroy Chart.js instances
+- **Controlled Components** — all sliders are controlled via React state
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
