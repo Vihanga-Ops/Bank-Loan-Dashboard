@@ -7,8 +7,8 @@ A responsive, interactive loan calculator and visualizer built with **React** an
 
 | | Link |
 |---|---|
-| 🌐 **Hosted Link** | [Click here](https://eloquent-lamington-4277eb.netlify.app/) |
-| 🐙 **GitHub Repository** | [Click here](https://github.com/Vihanga-Ops/-LocalTasker.git) |
+| 🌐 **Hosted Link** | [Click here](https://joyful-dusk-219f3b.netlify.app/) |
+| 🐙 **GitHub Repository** | [Click here](https://github.com/Vihanga-Ops/Bank-Loan-Dashboard) |
 
 ---
 
